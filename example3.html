@@ -1,0 +1,66 @@
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>The Holy Grail of Layouts: Example #4: A List Apart</title>
+    <style type="text/css">
+        .HolyGrail,
+        .HolyGrail-body {
+            display: flex;
+            flex-direction: column;
+        }
+
+        header, footer {
+            font-size: large;
+            text-align: center;
+            padding: 0.3em 0;
+            background: #999;
+        }
+
+        .HolyGrail-nav {
+            order: -1;
+        }
+
+        @media (min-width: 768px) {
+            .HolyGrail-body {
+                flex-direction: row;
+                flex: 1 0;
+            }
+            .HolyGrail-content {
+                flex: 1;
+                background: #DDD;
+            }
+            .HolyGrail-nav, .HolyGrail-ads {
+                /* 12em is the width of the columns */
+                flex: 0 0 12em;
+            }
+            .HolyGrail-nav {
+                background: #66F;
+            }
+            .HolyGrail-ads {
+                background: #F66;
+            }
+        }
+    </style>
+</head>
+
+<div class="HolyGrail">
+<header>This is the header</header>
+<div class="HolyGrail-body">
+    <main class="HolyGrail-content">
+        <h1>This is the main content.</h1>
+        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla.</p>
+        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla.</p>
+    </main>
+    <nav class="HolyGrail-nav">
+        <h2>This is the left sidebar.</h2>
+        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla.</p>
+    </nav>
+    <aside class="HolyGrail-ads">
+        <h2>This is the right sidebar.</h2>
+        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla.</p>
+    </aside>
+</div>
+<footer>…</footer>
+</div>
+
+</html>
